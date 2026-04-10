@@ -1,3 +1,8 @@
+# Why
+I recently started using Claude Code and have been fascinated by its capabilities. I’m curious about how much it actually “knows” about its own state. A simple idea I have is to build a function that’s closely tied to Claude Code itself—specifically its usage and runtime status.
+
+As much as I’d like to build the project from a single prompt, I’ve found that some debugging and layout refinement are necessary.
+
 # claude-code-status-line
 
 A persistent status bar for [Claude Code](https://claude.ai/code) that shows
@@ -24,7 +29,7 @@ sonnet-4-6 │ ~/projects/myapp │ ctx:[████████░░] 80% │
 ## Quick install
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/claude-code-status-line.git
+git clone https://github.com/scaliaven/claude-code-status-line.git
 cd claude-code-status-line
 bash install.sh
 ```
