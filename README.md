@@ -1,7 +1,7 @@
 # Why
 I recently started using Claude Code and have been fascinated by its capabilities. I’m curious about how much it actually “knows” about its own state. A simple idea I have is to build a function that’s closely tied to Claude Code itself—specifically its usage and runtime status.
 
-As much as I’d like to build the project from a single prompt, I’ve found that some debugging and layout refinement are necessary.
+As much as I’d like to build the project from one single prompt, I’ve found that some additional debugging and layout refinement prompts are necessary.
 
 # claude-code-status-line
 
