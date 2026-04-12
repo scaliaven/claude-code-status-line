@@ -22,8 +22,10 @@ sonnet-4-6 │ ~/projects/myapp │ ctx:[████████░░] 80% │
 - **python3** (always available where Claude Code runs)
 - **jq** *(optional but recommended for faster JSON parsing)*
 - **THE PROMPT** *(omitted those about debugging + refinement on layout)*:
-  'Build a minimal GitHub repo: a shell script that plugs into Claude Code's statusLine hook (receives JSON on stdin each turn) and shows a persistent status bar with model, cwd, session token % with progress bar, weekly token % against a configurable limit, and time until Monday midnight UTC reset. Include an installer that patches ~/.claude/settings.json, a shell function to source in bash/zsh for use outside Claude Code, and a README with manual setup instructions.'
-- **comments**: welcome to share yours too!
+  ```txt
+  Build a minimal GitHub repo: a shell script that plugs into Claude Code's statusLine hook (receives JSON on stdin each turn) and shows a persistent status bar with model, cwd, session token % with progress bar, weekly token % against a configurable limit, and time until Monday midnight UTC reset. Include an installer that patches ~/.claude/settings.json, a shell function to source in bash/zsh for use outside Claude Code, and a README with manual setup instructions.
+  ```
+- **comments**: welcome to share your prompts too!
 ---
 
 ## Quick install
@@ -196,3 +198,10 @@ jq 'del(.hooks.statusLine)' ~/.claude/settings.json | sponge ~/.claude/settings.
 rm -rf ~/.local/share/claude-status-line
 rm -rf ~/.config/claude-status-line
 ```
+
+---
+
+## Resources
+
+- [claude-code-tips](https://github.com/ykdojo/claude-code-tips): where I initially have the idea of building a statusline
+- [claude-hud](https://github.com/jarrodwatts/claude-hud)
