@@ -25,7 +25,9 @@ sonnet-4-6 │ ~/projects/myapp │ ctx:[████████░░] 80% │
   ```txt
   Build a minimal GitHub repo: a shell script that plugs into Claude Code's statusLine hook (receives JSON on stdin each turn) and shows a persistent status bar with model, cwd, session token % with progress bar, weekly token % against a configurable limit, and time until Monday midnight UTC reset. Include an installer that patches ~/.claude/settings.json, a shell function to source in bash/zsh for use outside Claude Code, and a README with manual setup instructions.
   ```
-- **comments**: welcome to share your prompts too!
+- **Note:** The status line prefers Claude’s `rate_limits.*.resets_at` timestamps (when available) to show an accurate reset countdown. When those fields aren’t present, it falls back to **next Monday 00:00 UTC** as a consistent, predictable “week boundary” so the weekly tracker and countdown still behave sensibly instead of disappearing or drifting.
+  - **next Monday 00:00 UTC** was originally chosen because I assumed the weekly reset was hardcoded to that time as an initial default. However, I later realized this isn’t the case, and the time now effectively serves only as a fallback.
+- **Comments**: welcome to share your prompts too!
 ---
 
 ## Quick install
